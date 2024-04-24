@@ -20,6 +20,7 @@ pub enum TorrentFilter {
     StalledUploading,
     StalledDownloading,
     Errored,
+    Checking,
 }
 
 #[derive(Debug, Clone, PartialEq, serde::Serialize, serde::Deserialize)]
@@ -299,13 +300,13 @@ pub enum Priority {
     /// Do not download
     DoNotDownload = 0,
     /// Normal priority
-    Normal        = 1,
+    Normal = 1,
     /// Mixed
-    Mixed         = 4,
+    Mixed = 4,
     /// High priority
-    High          = 6,
+    High = 6,
     /// Maximal priority
-    Maximal       = 7,
+    Maximal = 7,
 }
 
 #[derive(
@@ -324,9 +325,9 @@ pub enum PieceState {
     /// Not downloaded yet
     NotDownloaded = 0,
     /// Now downloading
-    Downloading   = 1,
+    Downloading = 1,
     /// Already downloaded
-    Downloaded    = 2,
+    Downloaded = 2,
 }
 
 /// `|` separeated list of hash values or `all`
